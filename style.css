@@ -1,0 +1,197 @@
+:root {
+  --bg-color: #0d1117;
+  --text-color: #e6e6e6;
+  --accent: #00ff88;
+  --secondary: #161b22;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header {
+  /*padding: 100px 20px;*/
+  background: var(--secondary);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  background-color: #0b0b0b;
+  color: #e0e0e0;
+  border-bottom: 2px solid #00ff88;
+  flex-wrap: wrap;
+}
+.left-header {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+.left-header h1 {
+  color: #00ff88;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.left-header p {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.right-header {
+  flex: 0 0 auto;
+  text-align: center;
+}
+.profile-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #00ff88;
+  box-shadow: 0 0 15px #00ff88;
+}
+
+h1 {
+  color: var(--accent);
+  font-size: 2.5em;
+}
+
+h2 {
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-shadow: 0 0 8px var(--accent);
+}
+
+.buttons .btn, .btn-outline {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn {
+  background: var(--accent);
+  color: var(--bg-color);
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.btn-outline {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--bg-color);
+}
+
+.project-card {
+  background: var(--secondary);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+}
+
+.skill {
+  background-color: #161b22;
+  background: var(--secondary);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 250px; /* grow, shrink, minimum width 250px */
+  max-width: 200px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+}
+#skills {
+  display: flex;
+  flex-wrap: wrap; /* wrap to next line if not enough space */
+  gap: 10px; /* space between skill boxes */
+  justify-content: center; /* center the skills horizontally */
+  padding: 40px 10px;
+}
+
+footer {
+  background: var(--secondary);
+  color: #999;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 0.9em;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .left-header {
+    text-align: center;
+  }
+}
