@@ -62,6 +62,13 @@ header {
   border: 3px solid #00ff88;
   box-shadow: 0 0 15px #00ff88;
 }
+.project-photo{
+  width: 30%;
+  height: 200px;
+  border-radius: 10%;
+  border: 3px solid #00ff88;
+  box-shadow: 0 0 15px #00ff88;
+}
 
 h1 {
   color: var(--accent);
